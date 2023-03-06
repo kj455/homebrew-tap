@@ -5,20 +5,20 @@
 class IntelliCli < Formula
   desc ""
   homepage ""
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kj455/intelli-cli/releases/download/v0.2.2/intelli-cli_Darwin_x86_64.tar.gz"
-      sha256 "eb9ee023363138d7ff0feb73ecf803cd1666c3c6f0b6b4fa0ad51da1845abda8"
+      url "https://github.com/kj455/intelli-cli/releases/download/v0.2.3/intelli-cli_Darwin_x86_64.tar.gz"
+      sha256 "071fa0316197c20c3610ed54459833b988efbc691dc7271012c0e586743d03fd"
 
       def install
         bin.install "intelli-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kj455/intelli-cli/releases/download/v0.2.2/intelli-cli_Darwin_arm64.tar.gz"
-      sha256 "8bf144cbb52e56e59f11387726227d0532e109daa81664c9d8bb5b3fc1a0adc1"
+      url "https://github.com/kj455/intelli-cli/releases/download/v0.2.3/intelli-cli_Darwin_arm64.tar.gz"
+      sha256 "6dd2e0d35c363012b9e598f3c3d0f00fb9d0cf14fa7de419c4bdcec1d9c7a90b"
 
       def install
         bin.install "intelli-cli"
@@ -27,17 +27,17 @@ class IntelliCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kj455/intelli-cli/releases/download/v0.2.2/intelli-cli_Linux_arm64.tar.gz"
-      sha256 "5a1b40a12025ee41d83045bb7f75911a81b3456ab7fd50802e156034f41e3704"
+    if Hardware::CPU.intel?
+      url "https://github.com/kj455/intelli-cli/releases/download/v0.2.3/intelli-cli_Linux_x86_64.tar.gz"
+      sha256 "f1491f5b0461fc94ee760c0b581b6e3f2b2964401bb7c7fbb40c9b08df8124ee"
 
       def install
         bin.install "intelli-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kj455/intelli-cli/releases/download/v0.2.2/intelli-cli_Linux_x86_64.tar.gz"
-      sha256 "6d95d3aecfe67c0ed5c0d74bb9b804e11d8e9f1425bd7bd498a5f437c2c1580d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kj455/intelli-cli/releases/download/v0.2.3/intelli-cli_Linux_arm64.tar.gz"
+      sha256 "9902f814a655fd0e6d23ca0a8e115a9f7d60ff6e0ff73cf6bc74311408b0e04a"
 
       def install
         bin.install "intelli-cli"
